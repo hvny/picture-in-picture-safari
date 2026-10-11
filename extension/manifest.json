@@ -1,0 +1,9 @@
+{
+  "manifest_version": 3,
+  "name": "Auto PiP",
+  "version": "1.0.0",
+  "description": "Видео в мини-окне при переключении вкладки.",
+  "permissions": ["storage"],
+  "action": { "default_popup": "popup.html", "default_title": "Auto PiP" },
+  "content_scripts": [{ "matches": ["http://*/*", "https://*/*"], "js": ["content.js"], "all_frames": true, "run_at": "document_idle" }]
+}
